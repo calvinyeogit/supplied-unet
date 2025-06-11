@@ -1,0 +1,11 @@
+numpy==1.26.4
+matplotlib
+scipy
+scikit-image
+torch
+torchvision
+tensorflow==1.15.5
+keras
+imgaug
+albumentations
+PyQt5
