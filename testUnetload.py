@@ -5,6 +5,25 @@ Created on Mon Jun  2 11:06:31 2025
 @author: mbiww
 """
 
+########## TESTING WHAT VALUES MASK ARE
+# import numpy as np
+# import matplotlib.pyplot as plt
+# from PIL import Image
+
+
+# mask = Image.open("/Users/calvin/supplied-unet/dataset_wangwei/masks/fn-vcl-001_Zmap_mask.tif").convert("L")  # Convert to grayscale
+# mask_np = np.array(mask)
+
+
+# print("Min pixel value:", mask_np.min())
+# print("Max pixel value:", mask_np.max())
+# print("Unique pixel values:", np.unique(mask_np))
+########## 
+# Min pixel value: 0
+# Max pixel value: 255
+# Unique pixel values: [  0 255]
+##########
+
 import os
 import numpy as np
 import tensorflow as tf
@@ -57,10 +76,10 @@ def display_images(image, cmap='gray',norm=None, interpolation='bilinear'):
 
 ## load image
 test_dataset=dataset()
-image_dir='/Users/calvin/forintern/dataset_wangwei/images'
-mask_dir='/Users/calvin/forintern/dataset_wangwei/masks'
+image_dir='/Users/calvin/supplied-unet/dataset_wangwei/images'
+mask_dir='/Users/calvin/supplied-unet/dataset_wangwei/masks'
 
-model_save_dir='/Users/calvin/forintern/created_model'
+model_save_dir='/Users/calvin/supplied-unet/created_model'
 model_name='testabcbig100.h5'
 
 
@@ -133,7 +152,7 @@ val_loader = DataLoader(
     )
 
 # Initialize model
-model = UNet(in_ch=1, out_ch=1)
+model = UNet(in_ch=1, out_ch=1, sf=16)
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 model = model.to(device)
 
@@ -143,12 +162,10 @@ optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9, weight_decay=1
 criterion = nn.BCELoss()
 
 # Training loop
-num_epochs_when_trialling = 2
+num_epochs_when_trialling = 5
 num_epochs_when_real = 30
 
-num_epochs = num_epochs_when_real
-
-
+num_epochs = num_epochs_when_trialling
 
 
 
@@ -231,8 +248,8 @@ import glob
 from PIL import Image
 import numpy as np
 
-predict_dir = '/Users/calvin/forintern/dataset_wangwei/forpredict'
-output_dir = '/Users/calvin/forintern/dataset_wangwei/predicted'
+predict_dir = '/Users/calvin/supplied-unet/dataset_wangwei/forpredict'
+output_dir = '/Users/calvin/supplied-unet/dataset_wangwei/predicted'
 os.makedirs(output_dir, exist_ok=True) # Creates folder if missing (no error if exists)
 
 # Load all image paths
