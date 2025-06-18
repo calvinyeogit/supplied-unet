@@ -170,8 +170,8 @@ import numpy as np
 from UNetModela import UNet
 
 # Prepare data
-image_np = np.stack(test_dataset.aug_images, axis=0).astype(np.float32)
-mask_np = np.stack(test_dataset.aug_masks, axis=0).astype(np.float32)
+image_np = np.stack(test_dataset.aug_images, axis=0).astype(np.float32) / 255.0
+mask_np = np.stack(test_dataset.aug_masks, axis=0).astype(np.float32) / 255.0
 
 image_np = np.squeeze(image_np, axis=-1)  # -> (N, 512, 512)
 mask_np = np.squeeze(mask_np, axis=-1)
@@ -209,7 +209,7 @@ model = model.to(device)
 
 # Optimizer and loss
 optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9, weight_decay=1e-6, nesterov=True)
-criterion = nn.BCELoss()
+criterion = nn.BCEWithLogitsLoss()
 
 # Training loop
 num_epochs_when_trialling = 5
@@ -239,7 +239,9 @@ for epoch in range(num_epochs):
         optimizer.zero_grad()
         outputs = model(imgs) # (B,1,H,W) raw logits
         loss = criterion(outputs, masks)
-        acc = binary_accuracy(outputs.detach(), masks.detach())
+        
+        # Calculate accuracy on sigmoid-activated outputs
+        acc = binary_accuracy(torch.sigmoid(outputs).detach(), masks.detach())
 
         loss.backward()
         optimizer.step()
@@ -358,12 +360,16 @@ for idx, path in enumerate(image_paths):
     tile_outputs = []
 
     for tile in tiles:
-        tile_tensor = torch.tensor(tile).unsqueeze(0).unsqueeze(0).float().to(device) / 1.0
+        tile_tensor = torch.tensor(tile).unsqueeze(0).unsqueeze(0).float().to(device) / 255.0
         with torch.no_grad():
-            pred = model(tile_tensor)
-        pred_np = pred.squeeze().cpu().numpy()
+            # Get raw logits from the model
+            logits = model(tile_tensor)
+            # Apply sigmoid to get probabilities
+            probs = torch.sigmoid(logits)
+            
+        pred_np = probs.squeeze().cpu().numpy()
         #pred_np=pred_np*255
-        pred_np = (pred_np > 0.3).astype(np.uint8) * 255
+        pred_np = (pred_np > 0.5).astype(np.uint8) * 255
         tile_outputs.append(pred_np)
 
     full_pred = untile_image(tile_outputs, n_rows, n_cols, tile_size, padding)

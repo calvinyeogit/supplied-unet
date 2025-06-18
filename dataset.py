@@ -70,19 +70,6 @@ class dataset(Unet_Config):
         return len(self.classes)-1
     
     
-    def load_image(self, image_dir = None):
-        """
-        Load images from directory ensuring consistent ordering across OS
-        """
-        image_list = sorted(glob.glob(os.path.join(image_dir,'*.tif')))  # Sort for consistent ordering
-        imageset = []
-        for image_path in image_list:
-            image = skio.imread(image_path)
-          if (image.shape[0]<self.tile_size[0] & image.shape[0]<self.tile_size[0]):
-                [image,shape] = self.pad_image(image,self.tile_size)
-            imageset.append(image)
-        return imageset, [os.path.basename(f) for f in image_list]  # Return both images and filenames
-
     def load_dataset(self, image_dir=None, mask_dir=None):
         """
         Load and match images with masks based on alphabetical order
