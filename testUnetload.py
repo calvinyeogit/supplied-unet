@@ -105,6 +105,35 @@ def display_all_pairs(images, masks, ncols=5):
     plt.tight_layout()
     plt.show()
 
+def analyze_mask_balance(masks, mask_filenames):
+    """
+    Analyzes and prints the percentage of white pixels in each mask.
+    """
+    print("\n--- Analyzing Mask Balance ---")
+    total_white_pixels = 0
+    total_pixels = 0
+
+    for i, mask in enumerate(masks):
+        white_pixels = np.sum(mask == 255)
+        black_pixels = np.sum(mask == 0)
+        total_mask_pixels = mask.size
+        
+        if total_mask_pixels == 0:
+            print(f"Mask {i} ('{mask_filenames[i]}') is empty.")
+            continue
+            
+        white_percentage = (white_pixels / total_mask_pixels) * 100
+        print(f"Mask {i+1:2d} ('{os.path.basename(mask_filenames[i])}'): {white_percentage:6.2f}% white pixels")
+        
+        total_white_pixels += white_pixels
+        total_pixels += total_mask_pixels
+
+    if total_pixels > 0:
+        overall_white_percentage = (total_white_pixels / total_pixels) * 100
+        print("---------------------------------")
+        print(f"Overall Balance: {overall_white_percentage:.2f}% white pixels across all masks.")
+    print("--- End of Analysis ---\n")
+
 ## load image
 test_dataset=dataset()
 image_dir='/Users/calvin/supplied-unet/dataset_wangwei/images'
@@ -126,6 +155,9 @@ model_name_full=model_save_dir+model_name
 
 try:
     # Load images and masks with proper matching
+    image_files = sorted(glob.glob(os.path.join(image_dir, '*.tif')))
+    mask_files = sorted(glob.glob(os.path.join(mask_dir, '*.tif')))
+    
     test_dataset.train_images, test_dataset.train_masks = test_dataset.load_dataset(image_dir, mask_dir)
 
     # Verify the pairs are valid
@@ -135,6 +167,9 @@ try:
         print("Image directory:", image_dir)
         print("Mask directory:", mask_dir)
         raise ValueError("Image-mask verification failed")
+
+    # Analyze the balance of the original masks
+    analyze_mask_balance(test_dataset.train_masks, mask_files)
 
     # If we get here, verification passed
     print("\nDisplaying all image-mask pairs...")
