@@ -377,7 +377,7 @@ for idx, path in enumerate(image_paths):
 
 def display_predictions(predict_dir, output_dir, ncols=4):
     """
-    Display original images and their predictions side by side
+    Display original images and their predictions side by side and save the plot
     Args:
         predict_dir: directory containing original images
         output_dir: directory containing predictions
@@ -413,6 +413,17 @@ def display_predictions(predict_dir, output_dir, ncols=4):
         plt.title(f'Predicted {idx+1}')
     
     plt.tight_layout()
+    
+    # Create figures directory if it doesn't exist
+    figures_dir = 'figures'
+    os.makedirs(figures_dir, exist_ok=True)
+    
+    # Save the plot with timestamp in figures directory
+    timestamp = time.strftime("%Y-%m-%d_%H%M%S")
+    plot_filename = os.path.join(figures_dir, f"prediction_comparison_{timestamp}.png")
+    plt.savefig(plot_filename, dpi=300, bbox_inches='tight')
+    print(f"\nSaved plot to: {plot_filename}")
+    
     plt.show()
 
 def check_prediction_values():

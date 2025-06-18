@@ -78,7 +78,7 @@ class dataset(Unet_Config):
         imageset = []
         for image_path in image_list:
             image = skio.imread(image_path)
-            if (image.shape[0]<self.tile_size[0] & image.shape[0]<self.tile_size[0]):
+          if (image.shape[0]<self.tile_size[0] & image.shape[0]<self.tile_size[0]):
                 [image,shape] = self.pad_image(image,self.tile_size)
             imageset.append(image)
         return imageset, [os.path.basename(f) for f in image_list]  # Return both images and filenames
