@@ -26,7 +26,7 @@ Created on Mon Jun  2 11:06:31 2025
 
 import os
 import numpy as np
-import tensorflow as tf
+# import tensorflow as tf
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -73,6 +73,37 @@ def display_images(image, cmap='gray',norm=None, interpolation='bilinear'):
                norm=norm, interpolation=interpolation)
     plt.show()
 
+def display_all_pairs(images, masks, ncols=5):
+    """
+    Display all image-mask pairs in a grid layout
+    Args:
+        images: list of images
+        masks: list of masks
+        ncols: number of columns in the grid
+    """
+    n_pairs = len(images)
+    nrows = (n_pairs + ncols - 1) // ncols  # Ceiling division
+    
+    # Create figure with enough height for both images and masks
+    fig = plt.figure(figsize=(4*ncols, 4*nrows*2))
+    
+    print(f"\nDisplaying all {n_pairs} image-mask pairs...")
+    
+    for idx in range(n_pairs):
+        # Plot image
+        plt.subplot(nrows*2, ncols, idx + 1)
+        plt.imshow(images[idx], cmap='gray')
+        plt.axis('off')
+        plt.title(f'Image {idx+1}')
+        
+        # Plot mask directly below the image
+        plt.subplot(nrows*2, ncols, idx + 1 + ncols*nrows)
+        plt.imshow(masks[idx], cmap='gray')
+        plt.axis('off')
+        plt.title(f'Mask {idx+1}')
+    
+    plt.tight_layout()
+    plt.show()
 
 ## load image
 test_dataset=dataset()
@@ -93,13 +124,30 @@ model_name='testabcbig100.h5'
 
 model_name_full=model_save_dir+model_name
 
+try:
+    # Load images and masks with proper matching
+    test_dataset.train_images, test_dataset.train_masks = test_dataset.load_dataset(image_dir, mask_dir)
 
-test_dataset.train_images=test_dataset.load_image(image_dir)
-test_dataset.train_masks=test_dataset.load_image(mask_dir)
+    # Verify the pairs are valid
+    if not test_dataset.verify_image_mask_pairs(test_dataset.train_images, test_dataset.train_masks):
+        print("\nERROR: Image-mask verification failed!")
+        print("Please check that your image and mask directories contain matching pairs.")
+        print("Image directory:", image_dir)
+        print("Mask directory:", mask_dir)
+        raise ValueError("Image-mask verification failed")
 
-images=test_dataset.train_images
-display_images(images[2])
-display_images(test_dataset.train_masks[2])
+    # If we get here, verification passed
+    print("\nDisplaying all image-mask pairs...")
+    display_all_pairs(test_dataset.train_images, test_dataset.train_masks)
+    
+except Exception as e:
+    print("\nERROR: Failed to load or process images!")
+    print(f"Error details: {str(e)}")
+    print("\nPlease check:")
+    print("1. Image and mask directories exist and are accessible")
+    print("2. Image and mask filenames follow matching patterns")
+    print("3. All files are valid .tif images")
+    raise  # Re-raise the exception for debugging
 
 ## doing imaug
 test_dataset.augment_images()
@@ -153,7 +201,9 @@ val_loader = DataLoader(
 
 # Initialize model
 model = UNet(in_ch=1, out_ch=1, sf=16)
-device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+# device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+##### Now forcing MacBook to use cpu
+device = torch.device("cpu")
 model = model.to(device)
 
 
@@ -197,6 +247,9 @@ for epoch in range(num_epochs):
         # Free unused MPS memory if using MPS
         if device.type == "mps":
             torch.mps.empty_cache()
+        elif device.type == "cuda":
+            torch.cuda.empty_cache()
+# No cache clearing needed for CPU
             
         # # 2) Compute IoU for this batch—no need for gradients
         # with torch.no_grad():
@@ -237,6 +290,8 @@ for epoch in range(num_epochs):
     
     if device.type == "mps":
         torch.mps.empty_cache()
+    elif device.type == "cuda":
+        torch.cuda.empty_cache()
 
 
 # Save model
@@ -319,4 +374,81 @@ for idx, path in enumerate(image_paths):
     Image.fromarray(full_pred.astype(np.uint8)).save(outpath)
 
     print(f"Saved prediction: {outpath}")
+
+def display_predictions(predict_dir, output_dir, ncols=4):
+    """
+    Display original images and their predictions side by side
+    Args:
+        predict_dir: directory containing original images
+        output_dir: directory containing predictions
+        ncols: number of columns (pairs) in the grid
+    """
+    # Get sorted lists of files
+    orig_files = sorted(glob.glob(os.path.join(predict_dir, '*.tif')))
+    pred_files = sorted(glob.glob(os.path.join(output_dir, '*_predict.jpg')))
+    
+    n_pairs = len(orig_files)
+    nrows = (n_pairs + ncols - 1) // ncols  # Ceiling division
+    
+    print(f"\nFound {n_pairs} image-prediction pairs")
+    
+    # Create figure
+    fig = plt.figure(figsize=(5*ncols, 4*nrows))
+    
+    for idx, (orig_path, pred_path) in enumerate(zip(orig_files, pred_files)):
+        # Load images
+        orig_img = Image.open(orig_path).convert('L')
+        pred_img = Image.open(pred_path)
+        
+        # Plot original
+        plt.subplot(nrows, ncols*2, idx*2 + 1)
+        plt.imshow(orig_img, cmap='gray')
+        plt.axis('off')
+        plt.title(f'Original {idx+1}')
+        
+        # Plot prediction
+        plt.subplot(nrows, ncols*2, idx*2 + 2)
+        plt.imshow(pred_img, cmap='gray')
+        plt.axis('off')
+        plt.title(f'Predicted {idx+1}')
+    
+    plt.tight_layout()
+    plt.show()
+
+def check_prediction_values():
+    """
+    Check the maximum and unique pixel values in all predicted masks
+    """
+    pred_files = sorted(glob.glob(os.path.join(output_dir, '*_predict.jpg')))
+    print(f"\nAnalyzing {len(pred_files)} predicted masks...")
+    
+    overall_max = 0
+    unique_values = set()
+    
+    for idx, pred_path in enumerate(pred_files):
+        # Load prediction
+        pred_img = np.array(Image.open(pred_path))
+        max_val = pred_img.max()
+        unique_vals = np.unique(pred_img)
+        
+        # Update overall statistics
+        overall_max = max(overall_max, max_val)
+        unique_values.update(unique_vals)
+        
+        # Print individual file stats
+        print(f"\nPrediction {idx+1}: {os.path.basename(pred_path)}")
+        print(f"  Max value: {max_val}")
+        print(f"  Unique values: {sorted(unique_vals)}")
+    
+    print("\nOverall Statistics:")
+    print(f"  Maximum pixel value across all predictions: {overall_max}")
+    print(f"  All unique pixel values found: {sorted(unique_values)}")
+
+# After model training and prediction, display the results
+print("\nDisplaying original images and their predictions...")
+display_predictions(predict_dir, output_dir)
+
+# Check prediction values
+print("\nAnalyzing prediction values...")
+check_prediction_values()
 

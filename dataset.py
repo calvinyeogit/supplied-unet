@@ -71,18 +71,55 @@ class dataset(Unet_Config):
     
     
     def load_image(self, image_dir = None):
-       image_list = glob.glob(os.path.join(image_dir,'*.tif')) 
-       imageset=[]
-       for ii in range(len(image_list)):
-          image=skio.imread(image_list[ii])
-          if (image.shape[0]<self.tile_size[0] & image.shape[0]<self.tile_size[0]):
-              [image,shape]=self.pad_image(image,self.tile_size)
-          
-         # if (image.shape[0]>self.tile_size[0]) :
-         #      image = skimage.transform.resize(image, (self.tile_size[0], self.tile_size[0]), order=1, preserve_range=True, anti_aliasing=True) 
-         #      image=image.astype(np.uint8)
-          imageset.append(image)
-       return imageset
+        """
+        Load images from directory ensuring consistent ordering across OS
+        """
+        image_list = sorted(glob.glob(os.path.join(image_dir,'*.tif')))  # Sort for consistent ordering
+        imageset = []
+        for image_path in image_list:
+            image = skio.imread(image_path)
+            if (image.shape[0]<self.tile_size[0] & image.shape[0]<self.tile_size[0]):
+                [image,shape] = self.pad_image(image,self.tile_size)
+            imageset.append(image)
+        return imageset, [os.path.basename(f) for f in image_list]  # Return both images and filenames
+
+    def load_dataset(self, image_dir=None, mask_dir=None):
+        """
+        Load and match images with masks based on alphabetical order
+        """
+        print("\nLoading and matching images with masks...")
+        print(f"Image directory: {image_dir}")
+        print(f"Mask directory: {mask_dir}")
+        
+        # Load and sort files alphabetically
+        image_list = sorted(glob.glob(os.path.join(image_dir,'*.tif')))
+        mask_list = sorted(glob.glob(os.path.join(mask_dir,'*.tif')))
+        
+        print(f"\nFound {len(image_list)} images and {len(mask_list)} masks")
+        
+        if len(image_list) != len(mask_list):
+            raise ValueError(f"Number of images ({len(image_list)}) does not match number of masks ({len(mask_list)})")
+        
+        # Load images and masks in sorted order
+        images = []
+        masks = []
+        print("\nLoading pairs:")
+        for img_path, mask_path in zip(image_list, mask_list):
+            img = skio.imread(img_path)
+            mask = skio.imread(mask_path)
+            
+            # Handle resizing if needed
+            if (img.shape[0] < self.tile_size[0] & img.shape[0] < self.tile_size[0]):
+                [img, shape] = self.pad_image(img, self.tile_size)
+            if (mask.shape[0] < self.tile_size[0] & mask.shape[0] < self.tile_size[0]):
+                [mask, shape] = self.pad_image(mask, self.tile_size)
+            
+            images.append(img)
+            masks.append(mask)
+            print(f"✓ Loaded: {os.path.basename(img_path)} -> {os.path.basename(mask_path)}")
+        
+        print(f"\nSuccessfully loaded {len(images)} image-mask pairs")
+        return images, masks
             
 
         
@@ -339,5 +376,59 @@ class dataset(Unet_Config):
         return A.Compose(augmentation_list)
         
  
+        
+    def verify_image_mask_pairs(self, images, masks):
+        """
+        Verify that image-mask pairs are valid and correctly matched.
+        Returns True if all checks pass, False otherwise.
+        """
+        if len(images) == 0 or len(masks) == 0:
+            print("Error: No images or masks to verify!")
+            return False
+        
+        if len(images) != len(masks):
+            print(f"Error: Number of images ({len(images)}) does not match number of masks ({len(masks)})")
+            return False
+        
+        all_valid = True
+        print("\nVerifying image-mask pairs...")
+        
+        for idx, (img, mask) in enumerate(zip(images, masks)):
+            print(f"\nChecking pair {idx + 1}/{len(images)}:")
+            
+            # Check dimensions match
+            if img.shape[:2] != mask.shape[:2]:
+                print(f"✗ Dimensions mismatch:")
+                print(f"  Image shape: {img.shape}")
+                print(f"  Mask shape: {mask.shape}")
+                all_valid = False
+            else:
+                print(f"✓ Dimensions match: {img.shape[:2]}")
+            
+            # Check mask is binary (0 or 255)
+            unique_values = np.unique(mask)
+            if not np.array_equal(unique_values, np.array([0, 255])) and not np.array_equal(unique_values, np.array([0])) and not np.array_equal(unique_values, np.array([255])):
+                print(f"✗ Mask is not binary. Found values: {unique_values}")
+                all_valid = False
+            else:
+                print(f"✓ Mask is binary: values {unique_values}")
+            
+            # Check image type and range
+            if img.dtype != np.uint8:
+                print(f"⚠️ Warning: Image is not uint8 type. Found: {img.dtype}")
+            else:
+                print(f"✓ Image type is uint8")
+            
+            if mask.dtype != np.uint8:
+                print(f"⚠️ Warning: Mask is not uint8 type. Found: {mask.dtype}")
+            else:
+                print(f"✓ Mask type is uint8")
+        
+        if all_valid:
+            print("\n✓ All image-mask pairs verified successfully!")
+        else:
+            print("\n✗ Some pairs failed verification. See errors above.")
+        
+        return all_valid
         
     
