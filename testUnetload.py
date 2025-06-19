@@ -236,9 +236,12 @@ val_loader = DataLoader(
 
 # Initialize model
 model = UNet(in_ch=1, out_ch=1, sf=16)
+##### USE THIS IF YOU ARE AN APPLE SILICON USER
 # device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
-##### Now forcing MacBook to use cpu
-device = torch.device("cpu")
+##### USE THIS IF YOU ARE A WINDOWS/APPLE INTEL USER
+device = torch.device("cuda" if torch.backends.cuda.is_available() else "cpu")
+##### USE THIS TO ONLY USE CPU
+# device = torch.device("cpu")
 model = model.to(device)
 
 
