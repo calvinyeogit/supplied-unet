@@ -1,0 +1,683 @@
+EPOCHS 1-5
+
+Epoch  5 | Batch 1575/1575    Loss (this batch): 0.0844
+running_acc: 3097.6303367614746
+Epoch [5/5]  Loss: 0.0458  Accuracy: 0.9834
+--- Epoch  5 Complete: Avg Loss: 0.0458  Avg IoU: 0.0000  
+✔️ Training finished. Final model saved to unet_modeld.pth
+Found 41 images in /Users/calvin/supplied-unet/dataset_wangwei/forpredict
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_027_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_026_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-008_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/VCL-fn_045-2_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/TLNN-CNIV_037_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-009_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_EG1192001_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_021_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/fn-vcl-011_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/VCL-fn_048-2_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/VCL-fn_039-2_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_017_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_020_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_016_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_028_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/fn-vcl-012_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_024_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_023_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_029_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_031_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-004_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-010_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_018_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-011_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-005_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-013_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-007_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/TLNN-CNIV_032_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/TLNN-CNIV_035_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-006_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-012_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-002_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_025_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_019_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_030_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-003_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-001_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-015_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/TLNN-CNIV_034_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/TLNN-CNIV_033_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-014_predict.jpg
+
+Displaying original images and their predictions...
+
+Found 41 image-prediction pairs
+
+Saved plot to: figures/prediction_comparison_2025-06-20_150942.png
+
+Analyzing prediction values...
+
+Analyzing 41 predicted masks...
+
+Prediction 1: AVG_tlnN-fn-001_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 2: AVG_tlnN-fn-002_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 3: AVG_tlnN-fn-003_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 4: AVG_tlnN-fn-004_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 5: AVG_tlnN-fn-005_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 6: AVG_tlnN-fn-006_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 7: AVG_tlnN-fn-007_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 8: AVG_tlnN-fn-008_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 9: AVG_tlnN-fn-009_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 10: AVG_tlnN-fn-010_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 11: AVG_tlnN-fn-011_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 12: AVG_tlnN-fn-012_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 13: AVG_tlnN-fn-013_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 14: AVG_tlnN-fn-014_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 15: AVG_tlnN-fn-015_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 16: FAK-cnIV_025_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 17: FAK-cnIV_026_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 18: FAK-cnIV_027_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 19: FAK-cnIV_028_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 20: FAK-cnIV_029_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 21: FAK-cnIV_030_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 22: FAK-cnIV_031_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 23: PAX-CNIV_016_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 24: PAX-CNIV_017_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 25: PAX-CNIV_018_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 26: PAX-CNIV_019_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 27: PAX-CNIV_020_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 28: PAX-CNIV_021_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 29: PAX-CNIV_023_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 30: PAX-CNIV_024_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 31: PAX-CNIV_EG1192001_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 32: TLNN-CNIV_032_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 33: TLNN-CNIV_033_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 34: TLNN-CNIV_034_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 35: TLNN-CNIV_035_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 36: TLNN-CNIV_037_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 37: VCL-fn_039-2_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 38: VCL-fn_045-2_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 39: VCL-fn_048-2_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 40: fn-vcl-011_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Prediction 41: fn-vcl-012_Zmap_img_predict.jpg
+  Max value: 0
+  Unique values: [0]
+
+Overall Statistics:
+  Maximum pixel value across all predictions: 0
+  All unique pixel values found: [0]
+
+EPOCHS 6-10
+
+Epoch  5 | Batch 1575/1575    Loss (this batch): 0.0304
+running_acc: 3097.6303367614746
+Epoch [5/5]  Loss: 0.0425  Accuracy: 0.9834
+--- Epoch  5 Complete: Avg Loss: 0.0425  Avg IoU: 0.0000  
+✔️ Training finished. Final model saved to unet_modeld.pth
+Found 41 images in /Users/calvin/supplied-unet/dataset_wangwei/forpredict
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_027_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_026_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-008_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/VCL-fn_045-2_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/TLNN-CNIV_037_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-009_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_EG1192001_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_021_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/fn-vcl-011_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/VCL-fn_048-2_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/VCL-fn_039-2_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_017_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_020_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_016_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_028_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/fn-vcl-012_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_024_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_023_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_029_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_031_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-004_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-010_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_018_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-011_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-005_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-013_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-007_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/TLNN-CNIV_032_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/TLNN-CNIV_035_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-006_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-012_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-002_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_025_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_019_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_030_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-003_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-001_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-015_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/TLNN-CNIV_034_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/TLNN-CNIV_033_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-014_predict.jpg
+
+Displaying original images and their predictions...
+
+Found 41 image-prediction pairs
+
+Saved plot to: figures/prediction_comparison_2025-06-20_153607.png
+
+Analyzing prediction values...
+
+Analyzing 41 predicted masks...
+
+Prediction 1: AVG_tlnN-fn-001_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 214, 217, 219, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 2: AVG_tlnN-fn-002_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 219, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 3: AVG_tlnN-fn-003_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 212, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 4: AVG_tlnN-fn-004_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 40, 41, 46, 214, 216, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 5: AVG_tlnN-fn-005_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 6: AVG_tlnN-fn-006_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 41, 216, 219, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 7: AVG_tlnN-fn-007_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 43, 219, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 8: AVG_tlnN-fn-008_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 9: AVG_tlnN-fn-009_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 213, 215, 216, 217, 218, 219, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 10: AVG_tlnN-fn-010_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 11: AVG_tlnN-fn-011_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 212, 215, 219, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 12: AVG_tlnN-fn-012_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 13: AVG_tlnN-fn-013_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 212, 213, 214, 216, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 14: AVG_tlnN-fn-014_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 35, 36, 37, 41, 43, 213, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 15: AVG_tlnN-fn-015_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 16: FAK-cnIV_025_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 215, 217, 218, 219, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 17: FAK-cnIV_026_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 43, 215, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 18: FAK-cnIV_027_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 214, 217, 218, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 19: FAK-cnIV_028_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 41, 215, 216, 217, 218, 219, 220, 221, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 20: FAK-cnIV_029_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 40, 41, 216, 218, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 21: FAK-cnIV_030_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 41, 217, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 22: FAK-cnIV_031_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 44, 216, 219, 220, 221, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 23: PAX-CNIV_016_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40, 212, 215, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 24: PAX-CNIV_017_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 215, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 25: PAX-CNIV_018_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 212, 217, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 26: PAX-CNIV_019_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 216, 218, 219, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 27: PAX-CNIV_020_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 40, 42, 43, 208, 218, 219, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 28: PAX-CNIV_021_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 211, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 29: PAX-CNIV_023_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 30: PAX-CNIV_024_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 215, 217, 218, 219, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 31: PAX-CNIV_EG1192001_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 47, 214, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 32: TLNN-CNIV_032_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 206, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 33: TLNN-CNIV_033_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 42, 216, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 34: TLNN-CNIV_034_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 42, 210, 215, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 35: TLNN-CNIV_035_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 36, 37, 38, 39, 41, 42, 214, 216, 217, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 36: TLNN-CNIV_037_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 209, 214, 216, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 37: VCL-fn_039-2_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 38: VCL-fn_045-2_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 41, 218, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 39: VCL-fn_048-2_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 41, 43, 215, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 40: fn-vcl-011_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 43, 210, 216, 218, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 41: fn-vcl-012_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 44, 215, 218, 219, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Overall Statistics:
+  Maximum pixel value across all predictions: 255
+  All unique pixel values found: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 46, 47, 206, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+EPOCHS 11-15
+
+Epoch  5 | Batch 1575/1575    Loss (this batch): 0.0332
+running_acc: 3097.6303367614746
+Epoch [5/5]  Loss: 0.0404  Accuracy: 0.9834
+--- Epoch  5 Complete: Avg Loss: 0.0404  Avg IoU: 0.0000  
+✔️ Training finished. Final model saved to unet_modeld.pth
+Found 41 images in /Users/calvin/supplied-unet/dataset_wangwei/forpredict
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_027_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_026_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-008_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/VCL-fn_045-2_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/TLNN-CNIV_037_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-009_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_EG1192001_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_021_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/fn-vcl-011_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/VCL-fn_048-2_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/VCL-fn_039-2_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_017_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_020_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_016_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_028_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/fn-vcl-012_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_024_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_023_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_029_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_031_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-004_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-010_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_018_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-011_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-005_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-013_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-007_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/TLNN-CNIV_032_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/TLNN-CNIV_035_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-006_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-012_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-002_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_025_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/PAX-CNIV_019_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/FAK-cnIV_030_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-003_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-001_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-015_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/TLNN-CNIV_034_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/TLNN-CNIV_033_Zmap_img_predict.jpg
+Saved prediction: /Users/calvin/supplied-unet/dataset_wangwei/predicted/AVG_tlnN-fn-014_predict.jpg
+
+Displaying original images and their predictions...
+
+Found 41 image-prediction pairs
+
+Saved plot to: figures/prediction_comparison_2025-06-20_160037.png
+
+Analyzing prediction values...
+
+Analyzing 41 predicted masks...
+
+Prediction 1: AVG_tlnN-fn-001_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 36, 37, 38, 39, 214, 219, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 2: AVG_tlnN-fn-002_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 40, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 3: AVG_tlnN-fn-003_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 43, 47, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 4: AVG_tlnN-fn-004_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 209, 216, 218, 219, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 5: AVG_tlnN-fn-005_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 217, 218, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 6: AVG_tlnN-fn-006_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 216, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 7: AVG_tlnN-fn-007_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 41, 216, 218, 219, 220, 221, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 8: AVG_tlnN-fn-008_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 42, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 9: AVG_tlnN-fn-009_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 42, 215, 216, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 10: AVG_tlnN-fn-010_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 11: AVG_tlnN-fn-011_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 215, 216, 217, 219, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 12: AVG_tlnN-fn-012_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 218, 219, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 13: AVG_tlnN-fn-013_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 215, 217, 218, 219, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 14: AVG_tlnN-fn-014_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 41, 42, 216, 218, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 15: AVG_tlnN-fn-015_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 41, 42, 43, 44, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 16: FAK-cnIV_025_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 41, 214, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 17: FAK-cnIV_026_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 41, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 18: FAK-cnIV_027_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 43, 44, 215, 217, 218, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 19: FAK-cnIV_028_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 42, 43, 47, 214, 216, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 20: FAK-cnIV_029_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 44, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 21: FAK-cnIV_030_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 211, 215, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 22: FAK-cnIV_031_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 45, 211, 217, 218, 219, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 23: PAX-CNIV_016_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 216, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 24: PAX-CNIV_017_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 217, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 25: PAX-CNIV_018_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 215, 216, 217, 218, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 26: PAX-CNIV_019_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 217, 218, 219, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 27: PAX-CNIV_020_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 218, 219, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 28: PAX-CNIV_021_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 41, 216, 218, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 29: PAX-CNIV_023_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 41, 214, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 30: PAX-CNIV_024_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 216, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 31: PAX-CNIV_EG1192001_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 207, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 32: TLNN-CNIV_032_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 210, 214, 216, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 33: TLNN-CNIV_033_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 42, 216, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 34: TLNN-CNIV_034_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 214, 216, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 35: TLNN-CNIV_035_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 41, 216, 218, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 36: TLNN-CNIV_037_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 216, 217, 218, 219, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 37: VCL-fn_039-2_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 41, 221, 222, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 38: VCL-fn_045-2_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 39: VCL-fn_048-2_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 40, 41, 217, 218, 219, 220, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 40: fn-vcl-011_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 217, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Prediction 41: fn-vcl-012_Zmap_img_predict.jpg
+  Max value: 255
+  Unique values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 214, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+Overall Statistics:
+  Maximum pixel value across all predictions: 255
+  All unique pixel values found: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 47, 207, 209, 210, 211, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
