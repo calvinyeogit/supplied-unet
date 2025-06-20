@@ -206,21 +206,20 @@ model = UNet(in_ch=1, out_ch=1, sf=16)
 device = torch.device("cpu")
 model = model.to(device)
 
-
+# ---------- COMMENTED OUT TRAINING SECTION BEGIN ----------
+"""
 # Optimizer and loss
 optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9, weight_decay=1e-6, nesterov=True)
 criterion = nn.BCELoss()
 
 # Training loop
-num_epochs_when_trialling = 5
+num_epochs_when_trialling = 1
 num_epochs_when_real = 30
 
 num_epochs = num_epochs_when_trialling
 
 
-
 for epoch in range(num_epochs):
-    
     t_start_epoch = time.time()
     
     model.train()
@@ -297,6 +296,17 @@ for epoch in range(num_epochs):
 # Save model
 torch.save(model.state_dict(), "unet_modeld.pth")
 print("✔️ Training finished. Final model saved to unet_modeld.pth")
+"""
+# ---------- COMMENTED OUT TRAINING SECTION END ----------
+
+# ------- Load a pre-trained model instead of training -------
+weight_path = "/Users/calvin/supplied-unet/downloaded_models/unet_pretrained.pth"  # <-- change to your file path
+state_dict = torch.load(weight_path, map_location=device)
+# If the checkpoint is a dict with a key called "state_dict", use the following instead:
+# state_dict = torch.load(weight_path, map_location=device)["state_dict"]
+model.load_state_dict(state_dict)
+model.eval()
+print(f"Loaded pre-trained weights from {weight_path}")
 
 import os
 import glob
